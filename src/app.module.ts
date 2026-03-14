@@ -7,6 +7,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigService } from '@nestjs/config';
 import { PortfoliosModule } from './portfolios/portfolios.module';
+import { CaseStudiesModule } from './case-studies/case-studies.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { PortfoliosModule } from './portfolios/portfolios.module';
     }),
     SlidersModule,
     PortfoliosModule,
+    CaseStudiesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
