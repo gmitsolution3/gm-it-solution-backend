@@ -6,6 +6,7 @@ import { SlidersModule } from './sliders/sliders.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigService } from '@nestjs/config';
+import { PortfoliosModule } from './portfolios/portfolios.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { ConfigService } from '@nestjs/config';
       }),
     }),
     SlidersModule,
+    PortfoliosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
