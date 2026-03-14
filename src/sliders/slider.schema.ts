@@ -1,12 +1,15 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type SliderDocument = Slider & Document;
+export type TSlider = Slider & Document;
 
 @Schema({ strict: true, timestamps: true, versionKey: false })
 export class Slider {
   @Prop({ required: true })
   title: string;
+
+  @Prop({ required: true })
+  titleHighlight: string;
 
   @Prop({ required: true })
   slogan: string;

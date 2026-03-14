@@ -8,6 +8,10 @@ export class CreateSliderDto {
 
   @IsString()
   @IsNotEmpty()
+  titleHighlight: string;
+
+  @IsString()
+  @IsNotEmpty()
   slogan: string;
 
   @IsString()
