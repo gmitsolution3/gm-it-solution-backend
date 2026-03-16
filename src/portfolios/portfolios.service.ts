@@ -20,7 +20,7 @@ export class PortfoliosService {
 
   // GET ALL PORTFOLIO
   async findAll(): Promise<Portfolio[]> {
-    return await this.portfolioModel.find({}).sort({ createdAt: -1 });
+    return await this.portfolioModel.find({}).sort({ createdAt: 1 });
   }
 
   // GET SINGLE PORTFOLIO
