@@ -8,19 +8,23 @@ export class CreateSliderDto {
 
   @IsString()
   @IsNotEmpty()
-  titleHighlight: string;
+  highlight: string;
 
   @IsString()
   @IsNotEmpty()
-  slogan: string;
+  description: string;
 
   @IsString()
   @IsNotEmpty()
-  ctaOne: string;
+  ctaPrimary: string;
 
   @IsString()
   @IsNotEmpty()
-  ctaTwo: string;
+  ctaSecondary: string;
+
+  @IsString()
+  @IsNotEmpty()
+  image: string;
 }
 
 export class UpdateSliderDto extends PartialType(CreateSliderDto) {}

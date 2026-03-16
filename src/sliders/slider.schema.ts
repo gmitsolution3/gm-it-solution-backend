@@ -9,16 +9,19 @@ export class Slider {
   title: string;
 
   @Prop({ required: true })
-  titleHighlight: string;
+  highlight: string;
 
   @Prop({ required: true })
-  slogan: string;
+  description: string;
 
   @Prop({ required: true })
-  ctaOne: string;
+  ctaPrimary: string;
 
   @Prop({ required: true })
-  ctaTwo: string;
+  ctaSecondary: string;
+
+  @Prop({ required: true })
+  image: string;
 }
 
 export const SliderSchema = SchemaFactory.createForClass(Slider);
