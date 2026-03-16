@@ -26,7 +26,7 @@ export class ServicesService {
 
   // FIND ALL SERVICE
   async findAll(): Promise<Service[]> {
-    return this.serviceModel.find().sort({ createdAt: -1 });
+    return this.serviceModel.find().sort({ createdAt: 1 });
   }
 
   // FIND ONE SERVICE
