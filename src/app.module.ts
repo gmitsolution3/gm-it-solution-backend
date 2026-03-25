@@ -10,6 +10,8 @@ import { PortfoliosModule } from './portfolios/portfolios.module';
 import { CaseStudiesModule } from './case-studies/case-studies.module';
 import { ServicesModule } from './services/services.module';
 import { UploadModule } from './upload/upload.module';
+import { LeadershipMessageModule } from './leadership-message/leadership-message.module';
+
 
 @Module({
   imports: [
@@ -27,6 +29,7 @@ import { UploadModule } from './upload/upload.module';
     CaseStudiesModule,
     ServicesModule,
     UploadModule,
+    LeadershipMessageModule,
   ],
   controllers: [AppController],
   providers: [AppService],
