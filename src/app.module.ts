@@ -12,6 +12,7 @@ import { ServicesModule } from './services/services.module';
 import { UploadModule } from './upload/upload.module';
 import { LeadershipMessageModule } from './leadership-message/leadership-message.module';
 import { TeamMembersModule } from './team-members/team-members.module';
+import { BlogsModule } from './blog/blog.module';
 
 
 @Module({
@@ -32,6 +33,7 @@ import { TeamMembersModule } from './team-members/team-members.module';
     UploadModule,
     LeadershipMessageModule,
     TeamMembersModule,
+    BlogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
