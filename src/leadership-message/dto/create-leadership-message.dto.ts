@@ -11,7 +11,6 @@ export class CreateLeadershipMessageDto {
   role: 'chairman' | 'ceo';
 
   @IsString()
-  @IsNotEmpty()
   quote: string;
 
   @IsString()

@@ -27,9 +27,7 @@ export class LeadershipMessageService {
     const exists = await this.model.findOne({ role: dto.role });
 
     if (exists) {
-      throw new ConflictException(
-        `${dto.role} message already exists`,
-      );
+      throw new ConflictException(`${dto.role} message already exists`);
     }
 
     return new this.model(dto).save();
@@ -52,15 +50,11 @@ export class LeadershipMessageService {
   }
 
   // UPDATE LEADER MESSAGE BY ROLE
-  async updateByRole(
-    role: string,
-    dto: UpdateLeadershipMessageDto,
-  ) {
-    const updated = await this.model.findOneAndUpdate(
-      { role },
-      dto,
-      { new: true, runValidators: true },
-    );
+  async updateByRole(id: string, dto: UpdateLeadershipMessageDto) {
+    const updated = await this.model.findOneAndUpdate({ _id: id }, dto, {
+      new: true,
+      runValidators: true,
+    });
 
     if (!updated) {
       throw new NotFoundException('Message not found');
@@ -70,8 +64,8 @@ export class LeadershipMessageService {
   }
 
   // DELETE LEADER MESSAGE BY ROLE
-  async removeByRole(role: string) {
-    const deleted = await this.model.findOneAndDelete({ role });
+  async removeByRole(id: string) {
+    const deleted = await this.model.findOneAndDelete({ _id: id });
 
     if (!deleted) {
       throw new NotFoundException('Message not found');
