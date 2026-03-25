@@ -28,7 +28,7 @@ export class TeamMembersService {
 
   // GET ALL TEAM MEMBER
   async findAll() {
-    return this.model.find().sort({ createdAt: -1 });
+    return this.model.find().sort({ createdAt: 1 });
   }
 
   // GET ONE TEAM MEMBER
