@@ -11,6 +11,7 @@ import { CaseStudiesModule } from './case-studies/case-studies.module';
 import { ServicesModule } from './services/services.module';
 import { UploadModule } from './upload/upload.module';
 import { LeadershipMessageModule } from './leadership-message/leadership-message.module';
+import { TeamMembersModule } from './team-members/team-members.module';
 
 
 @Module({
@@ -30,6 +31,7 @@ import { LeadershipMessageModule } from './leadership-message/leadership-message
     ServicesModule,
     UploadModule,
     LeadershipMessageModule,
+    TeamMembersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
