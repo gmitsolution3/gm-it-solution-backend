@@ -14,6 +14,7 @@ import { LeadershipMessageModule } from './leadership-message/leadership-message
 import { TeamMembersModule } from './team-members/team-members.module';
 import { BlogsModule } from './blog/blog.module';
 import { JobPostingsModule } from './job-posting/job-posting.module';
+import { JobApplicationsModule } from './job-applications/job-applications.module';
 
 
 @Module({
@@ -36,6 +37,7 @@ import { JobPostingsModule } from './job-posting/job-posting.module';
     TeamMembersModule,
     BlogsModule,
     JobPostingsModule,
+    JobApplicationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
