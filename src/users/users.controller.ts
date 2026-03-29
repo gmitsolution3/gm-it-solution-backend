@@ -16,6 +16,17 @@ import { UpsertUserDto } from './dto/upsert-user.dto';
 export class UsersController {
   constructor(private readonly service: UsersService) {}
 
+  @Get()
+  async findAll() {
+    const data = await this.service.findAll();
+
+    return {
+      success: true,
+      message: 'Users fetched successfully',
+      data,
+    };
+  }
+
   // 🔥 UPSERT USER
   @Patch()
   async upsert(@Body() dto: UpsertUserDto) {

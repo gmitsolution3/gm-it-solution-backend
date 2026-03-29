@@ -1,7 +1,4 @@
-import {
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -15,6 +12,10 @@ export class UsersService {
     @InjectModel(User.name)
     private model: Model<UserDocument>,
   ) {}
+
+  async findAll() {
+    return this.model.find().sort({ createdAt: -1 });
+  }
 
   // 🔥 UPSERT USER (PATCH)
   async upsert(dto: UpsertUserDto) {
