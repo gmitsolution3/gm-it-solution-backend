@@ -15,6 +15,7 @@ import { TeamMembersModule } from './team-members/team-members.module';
 import { BlogsModule } from './blog/blog.module';
 import { JobPostingsModule } from './job-posting/job-posting.module';
 import { JobApplicationsModule } from './job-applications/job-applications.module';
+import { UsersModule } from './users/users.module';
 
 
 @Module({
@@ -38,6 +39,7 @@ import { JobApplicationsModule } from './job-applications/job-applications.modul
     BlogsModule,
     JobPostingsModule,
     JobApplicationsModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
