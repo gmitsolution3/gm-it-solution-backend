@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const corsOptions: CorsOptions = {
     origin: ['https://www.gmitsolution.net', 'http://localhost:5173'],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true,
   };
