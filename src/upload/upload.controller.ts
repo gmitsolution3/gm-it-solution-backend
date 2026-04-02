@@ -23,7 +23,7 @@ export class UploadController {
     @UploadedFile(
       new ParseFilePipe({
         validators: [
-          new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 }), // Increased to 10MB for PDFs
+          new MaxFileSizeValidator({ maxSize: 4 * 1024 * 1024 }), // Increased to 10MB for PDFs
         ],
       }),
     )
