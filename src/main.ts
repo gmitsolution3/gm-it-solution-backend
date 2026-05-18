@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const corsOptions: CorsOptions = {
-    origin: ['https://www.gmitsolution.net', 'http://localhost:5173'],
+    origin: ['https://www.gmitsolution.net', 'http://localhost:5173', "http://localhost:3000"],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Authorization',
     credentials: true,
