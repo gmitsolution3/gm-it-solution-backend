@@ -15,7 +15,7 @@ import { CaseStudiesService } from './case-studies.service';
 import { CreateCaseStudyDto } from './dto/create-case-study.dto';
 import { UpdateCaseStudyDto } from './dto/update-case-study.dto';
 
-import { successResponse } from '@/utils';
+import { successResponse } from '../../utils';
 
 @Controller('case-studies')
 export class CaseStudiesController {

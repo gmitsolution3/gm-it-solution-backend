@@ -12,7 +12,7 @@ import {
 import { PortfoliosService } from './portfolios.service';
 import { CreatePortfolioDto } from './dto/create-portfolio.dto';
 import { UpdatePortfolioDto } from './dto/update-portfolio.dto';
-import { successResponse } from './../../utils/index';
+import { successResponse } from './../../utils';
 
 @Controller('portfolios')
 export class PortfoliosController {
