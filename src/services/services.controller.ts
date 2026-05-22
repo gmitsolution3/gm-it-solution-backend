@@ -14,7 +14,7 @@ import { ServicesService } from './services.service';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
 
-import { successResponse } from 'utils';
+import { successResponse } from '@/utils';
 
 @Controller('services')
 export class ServicesController {

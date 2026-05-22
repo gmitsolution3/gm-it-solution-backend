@@ -1,20 +1,23 @@
 import {
-  IsString,
-  IsNotEmpty,
   IsEmail,
+  IsEnum,
+  IsNotEmpty,
   IsOptional,
-  IsIn,
+  IsString,
+  MinLength,
 } from 'class-validator';
 
 export class UpsertUserDto {
-  @IsString()
-  @IsNotEmpty()
-  userName: string;
+  @IsNotEmpty({ message: 'Name is required' })
+  @IsString({ message: 'Name must be a string' })
+  @MinLength(2, { message: 'Name must be at least 2 characters long' })
+  name: string;
 
-  @IsEmail()
+  @IsNotEmpty({ message: 'Email is required' })
+  @IsEmail({}, { message: 'Please provide a valid email address' })
   email: string;
 
   @IsOptional()
-  @IsIn(['user', 'admin'])
-  role?: 'user' | 'admin';
+  @IsEnum(['user', 'admin'], { message: 'Role must be either user or admin' })
+  role?: string;
 }

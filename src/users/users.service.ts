@@ -23,7 +23,7 @@ export class UsersService {
       { email: dto.email },
       {
         $set: {
-          userName: dto.userName,
+          name: dto.name,
         },
         $setOnInsert: {
           role: dto.role || 'user',
